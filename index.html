@@ -1,0 +1,110 @@
+---𝔹𝕐 𝕊ℍ𝕆𝔾𝕌ℕ---
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <script src="java.js"></script>
+  <title>Calculatrice</title> 
+  <style> 
+    body {
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    
+    #display {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 10px;
+    }
+    
+    button {
+      width: 48px;
+      height: 48px;
+      margin: 5px;
+      font-size: 18px;
+      border-radius: 50%;
+      background-color: #333;
+      color: white;
+      border: none;
+    }
+    
+    button:hover {
+      background-color: #555;
+    }
+    
+    .operator {
+      background-color: #FFC300;
+      color: black;
+    }
+    
+    .operator:hover {
+      background-color: #FFD633;
+    }
+    
+    #by-shogun {
+      font-size: 12px;
+    }
+    
+    #memory-display {
+      width: 100%;
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+      background-color: #333;
+    }
+    
+    #large-button {
+      width: 100%;
+      height: 48px;
+      margin-top: 10px;
+      font-size: 18px;
+      border-radius: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+    }
+    
+    #large-button:hover {
+      background-color: #555;
+    }
+  </style> 
+</head> 
+<body> 
+   <input type="text" id="display" readonly> 
+   <br> 
+   <button onclick="appendToDisplay('1')">1</button> 
+   <button onclick="appendToDisplay('2')">2</button> 
+   <button onclick="appendToDisplay('3')">3</button> 
+   <button class="operator" onclick="appendToDisplay('+')">+</button> 
+   <br> 
+   <button onclick="appendToDisplay('4')">4</button> 
+   <button onclick="appendToDisplay('5')">5</button> 
+   <button onclick="appendToDisplay('6')">6</button> 
+   <button class="operator" onclick="appendToDisplay('-')">-</button> 
+   <br> 
+   <button onclick="appendToDisplay('7')">7</button> 
+   <button onclick="appendToDisplay('8')">8</button> 
+   <button onclick="appendToDisplay('9')">9</button> 
+   <button class="operator" onclick="appendToDisplay('*')">*</button> 
+   <br> 
+   <button onclick="appendToDisplay('0')">0</button> 
+   <button onclick="calculate()">=</button> 
+   <button class="operator" onclick="clearDisplay()">C</button> 
+   <button class="operator" onclick="appendToDisplay('/')">/</button> 
+   <br> 
+   <button class="operator" onclick="calculateSin()">sin</button> 
+   <button class="operator" onclick="calculateCos()">cos</button> 
+   <button class="operator" onclick="calculateSquare()">x²</button> 
+   <button class="operator" onclick="memoryRecall()">MR</button> 
+   
+   <div id="memory-display"></div>
+   
+   <button id="large-button" onclick="clearMemory()">Clear Memory</button>
+</body> 
+</html>
